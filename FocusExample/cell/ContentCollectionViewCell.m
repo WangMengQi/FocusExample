@@ -28,9 +28,11 @@ CGFloat maxAlpha = 0.45;
     [_smallLabel setLeft:20.0];
 }
 
+
 - (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
+    
     [self resize];
 }
 

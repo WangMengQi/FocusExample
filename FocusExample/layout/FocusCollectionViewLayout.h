@@ -10,4 +10,10 @@
 
 @interface FocusCollectionViewLayout : UICollectionViewFlowLayout
 
+@property (nonatomic, assign) CGFloat standartHeight;
+@property (nonatomic, assign) CGFloat focusedHeight;
+@property (nonatomic, assign) CGFloat dragOffset;
+
+- (void)setStandartHeight:(CGFloat)standartHeight;
+
 @end

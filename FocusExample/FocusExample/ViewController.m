@@ -28,9 +28,6 @@
     _hanabiCollectionViewLayout = [[FocusCollectionViewLayout alloc]init];
     [_hanabiCollectionViewLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     [_hanabiCollectionViewLayout setSectionInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    flowLayout.sectionInset = UIEdgeInsetsMake(10, 0, 10, 0);
     
     _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen]bounds].size.height) collectionViewLayout:_hanabiCollectionViewLayout];
     [_collectionView registerNib:[UINib nibWithNibName:@"ContentCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellIdentifier"];

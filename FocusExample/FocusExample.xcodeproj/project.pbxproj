@@ -75,13 +75,13 @@
 				21EC1C851C75A31F001E3063 /* ViewUtils */,
 				21EC1C6C1C75A308001E3063 /* AppDelegate.h */,
 				21EC1C6D1C75A308001E3063 /* AppDelegate.m */,
+				21EC1C751C75A308001E3063 /* ViewController.h */,
+				21EC1C761C75A308001E3063 /* ViewController.m */,
 				21EC1C6E1C75A308001E3063 /* Assets.xcassets */,
 				21EC1C6F1C75A308001E3063 /* LaunchScreen.storyboard */,
 				21EC1C711C75A308001E3063 /* Main.storyboard */,
 				21EC1C731C75A308001E3063 /* Info.plist */,
 				21EC1C741C75A308001E3063 /* main.m */,
-				21EC1C751C75A308001E3063 /* ViewController.h */,
-				21EC1C761C75A308001E3063 /* ViewController.m */,
 			);
 			path = FocusExample;
 			sourceTree = "<group>";

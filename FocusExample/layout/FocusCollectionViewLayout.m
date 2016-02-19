@@ -8,9 +8,9 @@
 
 #import "FocusCollectionViewLayout.h"
 
-CGFloat standartHeight = 100.0;
-CGFloat focusedHeight = 213;
-CGFloat dragOffset = 180.0;
+CGFloat defaultStandartHeight = 100.0;
+CGFloat defaultFocusedHeight = 213;
+CGFloat defaultDragOffset = 180.0;
 
 @interface FocusCollectionViewLayout()
 {
@@ -26,6 +26,9 @@ CGFloat dragOffset = 180.0;
     self = [super init];
     if (self) {
         cachedLayoutAttributes = [[NSArray alloc]init];
+        _standartHeight = defaultStandartHeight;
+        _focusedHeight = defaultFocusedHeight;
+        _dragOffset = defaultDragOffset;
     }
     return self;
 }
@@ -33,7 +36,7 @@ CGFloat dragOffset = 180.0;
 - (CGSize)collectionViewContentSize
 {
     NSInteger itemsCount = [self numberOfItems];
-    CGFloat contentHeight = (itemsCount) * dragOffset + ([self height] - dragOffset);
+    CGFloat contentHeight = (itemsCount) * _dragOffset + ([self height] - _dragOffset);
     return CGSizeMake([self width], contentHeight);
 }
 
@@ -44,8 +47,8 @@ CGFloat dragOffset = 180.0;
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity
 {
-    CGFloat proposedItemIndex = roundf(proposedContentOffset.y / dragOffset);
-    CGFloat nearestPageOffset = proposedItemIndex * dragOffset;
+    CGFloat proposedItemIndex = roundf(proposedContentOffset.y / _dragOffset);
+    CGFloat nearestPageOffset = proposedItemIndex * _dragOffset;
     
     return CGPointMake(0.0, nearestPageOffset);
 }
@@ -70,17 +73,17 @@ CGFloat dragOffset = 180.0;
     
     for (NSInteger item = 0; item < itemsCount; item ++ ) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:item inSection:0];
-        CGFloat height = standartHeight;
+        CGFloat height = _standartHeight;
         NSInteger currentFocusedIndex = [self currentFocusedItemIndex];
         CGFloat nextItemOffset = [self nextItemPercentageOffset:currentFocusedIndex];
         if (indexPath.item == currentFocusedIndex) {
-            y = [self yOffset] - standartHeight*nextItemOffset;
-            height = focusedHeight;
+            y = [self yOffset] - _standartHeight*nextItemOffset;
+            height = _focusedHeight;
         }
         else if (indexPath.item == (currentFocusedIndex + 1) && indexPath.item != itemsCount)
         {
-            height = standartHeight + MAX((focusedHeight - standartHeight) * nextItemOffset, 0);
-            CGFloat maxYOffset = y + standartHeight;
+            height = _standartHeight + MAX((_focusedHeight - _standartHeight) * nextItemOffset, 0);
+            CGFloat maxYOffset = y + _standartHeight;
             y = maxYOffset - height;
         }
         else
@@ -108,13 +111,13 @@ CGFloat dragOffset = 180.0;
 
 - (NSInteger)currentFocusedItemIndex
 {
-    NSInteger index = [self yOffset] / dragOffset;
+    NSInteger index = [self yOffset] / _dragOffset;
     return MAX(0, index);
 }
 
 - (CGFloat)nextItemPercentageOffset:(NSInteger)index
 {
-    return ([self yOffset] / dragOffset) - index;
+    return ([self yOffset] / _dragOffset) - index;
 }
 
 - (NSInteger)numberOfItems
@@ -135,6 +138,13 @@ CGFloat dragOffset = 180.0;
 - (CGFloat)yOffset
 {
     return self.collectionView.contentOffset.y;
+}
+
+- (void)setStandartHeight:(CGFloat)standartHeight
+{
+    if (standartHeight) {
+        _standartHeight = standartHeight;
+    }
 }
 
 @end
