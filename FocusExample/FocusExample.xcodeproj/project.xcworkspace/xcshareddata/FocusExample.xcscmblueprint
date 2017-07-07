@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "32921A3BAF0F3B3F15DCA2F5329B9FF5ED2C7CF7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "32921A3BAF0F3B3F15DCA2F5329B9FF5ED2C7CF7" : 9223372036854775807,
+    "A58C5C2B6BFA54AE28CFD00DADD82457CC8A4983" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B0136F7B-14DC-4CCE-B49E-F8308DDA698B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "32921A3BAF0F3B3F15DCA2F5329B9FF5ED2C7CF7" : "FocusExample\/",
+    "A58C5C2B6BFA54AE28CFD00DADD82457CC8A4983" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FocusExample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FocusExample\/FocusExample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/WangMengQi\/FocusExample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "32921A3BAF0F3B3F15DCA2F5329B9FF5ED2C7CF7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/WangMengQi\/MLHorizontalCollectionViewFlowLayout.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A58C5C2B6BFA54AE28CFD00DADD82457CC8A4983"
+    }
+  ]
+}
