@@ -50,6 +50,7 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
+    
     return 1;
 }
 
