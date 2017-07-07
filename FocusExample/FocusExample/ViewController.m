@@ -22,8 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    NSLog(@"1");
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
     
     _hanabiCollectionViewLayout = [[FocusCollectionViewLayout alloc]init];
     [_hanabiCollectionViewLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -44,7 +45,6 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    
     return 9;
 }
 
